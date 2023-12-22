@@ -1,0 +1,166 @@
+.header{
+  background: repeating-linear-gradient( 45deg, #283D47, #283D4A 10.9px, #8D99A1 1px, #8D99A1 11px );
+  color: #FDFDFD;
+  height: 3%;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+
+  h4{
+    margin: 0;
+  }
+}
+
+.container {
+  border: 1px solid #e8e8e8;
+  padding: 0.5%;
+  height: 91.5%;
+
+  .disable-section{
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  .h-95{
+    height: 95%!important;
+  }
+
+  .convert-notification{
+    background: #506750;
+    color: #fff;
+    padding: 0.2%;
+    text-align: center;
+  }
+
+  .convertor-box{
+    height: 100%;
+    display:flex;
+
+    .ads-box {
+      width: 13%;
+      margin-left: 1%;
+      text-align: center;
+      background: #e8e8e8;
+      border: 1px solid #e8e8e8;
+
+      label { 
+        color: #e8e8e8;
+      }
+    }
+
+    .input-box {
+      width: 37%;
+      padding: 0%;
+      border: 10px solid #e8e8e8;
+
+      textarea {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  
+    .lang-selection{
+      width: 10%;
+      padding: 1%;
+
+      select {
+        width: 100%;
+      }
+    }
+  
+    .output-box {
+      width: 37%;
+      padding: 0%;
+      border: 10px solid #e8e8e8;
+      textarea {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
+  .actions {
+    text-align: center;
+    width: 40%;
+    margin-left: 32%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100%;
+  
+    button {
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 18px;
+      height: 2.5rem;
+      background: #e8e8e8;
+      color: #171717;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  height: 3%;
+  background: #EBEBEB;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

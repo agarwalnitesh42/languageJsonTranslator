@@ -1,0 +1,48 @@
+<div class="header">
+  <h4> Language JSON Translator </h4>
+  <span> 
+    <label (click)="togglePopUp()"> </label>
+    <span class="popuptext" id="myPopup">Email us at agarwalnitesh42@gmail.com!</span>
+  </span>
+</div>
+
+<div class="container">
+  <div *ngIf="loading" class="convert-notification"> <span> We are converting , Kindly sit back and relax . </span> </div>
+  <div class="convertor-box" [ngClass]="[loading?'disable-section':'' , loading?'h-95':'']">
+    <div class="input-box">
+      <textarea name="inputjson" placeholder="Enter your JSON Here" cols="61" rows="31" [(ngModel)]="inputJson" (ngModelChange)="prettifyInputJSON()">
+      </textarea>
+    </div>
+    <div class="lang-selection">
+      <select class="form-control" [(ngModel)]="selectedLang.code">
+        <option *ngFor="let lang of langs" [value]="lang.code">{{lang.label}} ({{lang.code}})</option>
+      </select>
+
+        <div class="actions">
+          <button class="convert" (click)="convert()"> <span *ngIf="!loading" title="Convert"> > </span> <span *ngIf="loading" title="Converting"><img width="30px" src="assets/loading.gif"/></span> </button>
+        </div>
+    </div>
+    <div class="output-box">
+      <textarea name="outoutjson" placeholder="Output will be here " cols="61" rows="31" [(ngModel)]="outputJson">
+      </textarea>
+    </div>
+    <div class="ads-box">
+      <!-- tff-translator -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5396103146762870"
+            data-ad-slot="4257378433"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+      </ins>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span> Language JSON Translator 1.0.0 </span>
+  <span (click)="togglePopUp()"> Report a bug ? - 
+      <span class="popuptext" id="myPopup">Email us at agarwalnitesh42@gmail.com!</span>
+  </span>
+  <span> Copyright @2019 </span>
+</div>

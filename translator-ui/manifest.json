@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "word",
+    "background": {
+      "persistent": true
+    },
+    "browser_action": {
+      "default_title": "Comparator"
+    },
+    "permissions": [
+      "*://*/*",
+      "tabs"
+    ]
+  }
